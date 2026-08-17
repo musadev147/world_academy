@@ -1,0 +1,677 @@
+{
+  "info": {
+    "_postman_id": "22c3748c-8bd5-4f21-a798-3a403a37d986",
+    "name": "worldacademy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32386297"
+  },
+  "item": [
+    {
+      "name": "student",
+      "item": [
+        {
+          "name": "test",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "48f2641e56d3ff1fa75d64a1137a6932",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "https://worldacademy.uk/api/v1/tests",
+              "protocol": "https",
+              "host": [
+                "worldacademy",
+                "uk"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "student-test",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "48f2641e56d3ff1fa75d64a1137a6932",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "test_id",
+                  "value": "236",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "https://worldacademy.uk/api/v1/student-tests",
+              "protocol": "https",
+              "host": [
+                "worldacademy",
+                "uk"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "student-tests"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "submitTest",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "48f2641e56d3ff1fa75d64a1137a6932",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"question_2608\":\"9506\",\"question_2606\":\"9501\",\"student_test_id\":4533}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{ward_api}}/student-test-submit/4533",
+              "host": [
+                "{{ward_api}}"
+              ],
+              "path": [
+                "student-test-submit",
+                "4533"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "profile",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "guide_line",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "48f2641e56d3ff1fa75d64a1137a6932",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{ward_api}}/dashboard-guide-line",
+              "host": [
+                "{{ward_api}}"
+              ],
+              "path": [
+                "dashboard-guide-line"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "new_student",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "student-lecture",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "whatsapp",
+      "item": [
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "IP TESter",
+      "item": [
+        {
+          "name": "get ip",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "test_two",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "api_areas",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "assignment-submissions",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "1f3f9806f693ac364ca188e845a75aa7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file_path",
+              "type": "file",
+              "src": "postman-cloud:///1eebe8ce-7102-4d40-b21c-767057195798"
+            },
+            {
+              "key": "assignment_id",
+              "value": "341",
+              "type": "text"
+            },
+            {
+              "key": "content",
+              "value": "\"Hello two\"",
+              "type": "text"
+            },
+            {
+              "key": "submitted",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/assignment-submissions",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "assignment-submissions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "assignment",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "1f3f9806f693ac364ca188e845a75aa7",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/assignments/",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "assignments",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"h.kabir01796010084@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/accounts",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "single-assignment",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "1f3f9806f693ac364ca188e845a75aa7",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/assignments/553",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "assignments",
+            "553"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "menus",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/menus",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "menus"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "courses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/courses",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "current-courses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/current-courses",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "current-courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "search-courses",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"searchItem\":\"employee\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/search-courses",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "search-courses"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sessions",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"searchItem\":\"employee\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/pagination-courses?page=2",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "pagination-courses"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sms",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"searchItem\":\"employee\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://api.greenweb.com.bd/api.php?token=1101511011017153172703d4a610c36ed6b68630a2cb72eb73b2e&to=01796010084&message=ওটিপি পরীক্ষা ",
+          "protocol": "http",
+          "host": [
+            "api",
+            "greenweb",
+            "com",
+            "bd"
+          ],
+          "path": [
+            "api.php"
+          ],
+          "query": [
+            {
+              "key": "token",
+              "value": "1101511011017153172703d4a610c36ed6b68630a2cb72eb73b2e"
+            },
+            {
+              "key": "to",
+              "value": "01796010084"
+            },
+            {
+              "key": "message",
+              "value": "ওটিপি পরীক্ষা "
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test-results",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "48f2641e56d3ff1fa75d64a1137a6932"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"test_id\":162\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/test-results/162",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "test-results",
+            "162"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "tests",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "48f2641e56d3ff1fa75d64a1137a6932"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "https://worldacademy.uk/api/v1/tests",
+          "protocol": "https",
+          "host": [
+            "worldacademy",
+            "uk"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "tests"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "sendpulse",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "text_req",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.contabo.com/v1/users",
+          "protocol": "https",
+          "host": [
+            "api",
+            "contabo",
+            "com"
+          ],
+          "path": [
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "host-participant-reg",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "course-view-api",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "botbiz",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
