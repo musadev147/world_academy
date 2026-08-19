@@ -20,6 +20,11 @@ import '../features/notification/screens/notifications_screen.dart';
 import '../features/recertification/screens/recertification_screen.dart';
 import '../features/refer/screens/refer_screen.dart';
 import '../features/youtube/screens/youtube_screen.dart';
+import '../features/profile/screens/personal_details_screen.dart';
+import '../features/profile/screens/change_password_screen.dart';
+import '../features/profile/screens/help_support_screen.dart';
+
+// Admin
 import '../features/admin/screens/admin_dashboard_screen.dart';
 import '../features/admin/screens/admin_student_management_screen.dart';
 import '../features/admin/screens/admin_enrollment_screen.dart';
@@ -119,6 +124,18 @@ class AppPages {
     GetPage(
       name: _Paths.YOUTUBE,
       page: () => const YoutubeScreen(),
+    ),
+    GetPage(
+      name: _Paths.PERSONAL_DETAILS,
+      page: () => PersonalDetailsScreen(),
+    ),
+    GetPage(
+      name: _Paths.CHANGE_PASSWORD,
+      page: () => const ChangePasswordScreen(),
+    ),
+    GetPage(
+      name: _Paths.HELP_SUPPORT,
+      page: () => const HelpSupportScreen(),
     ),
     GetPage(
       name: _Paths.ADMIN_DASHBOARD,

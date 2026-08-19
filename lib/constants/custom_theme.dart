@@ -28,16 +28,16 @@ final class CustomTheme {
       fontFamily: GoogleFonts.openSans().fontFamily,
       textTheme: GoogleFonts.openSansTextTheme(),
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.white,
-        foregroundColor: AppColors.allPrimaryColor,
+        backgroundColor: AppColors.allPrimaryColor,
+        foregroundColor: Colors.white,
         elevation: 0,
-        iconTheme: const IconThemeData(color: AppColors.allPrimaryColor),
-        actionsIconTheme: const IconThemeData(color: AppColors.allPrimaryColor),
+        iconTheme: const IconThemeData(color: Colors.white),
+        actionsIconTheme: const IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
           fontFamily: GoogleFonts.openSans().fontFamily,
           fontWeight: FontWeight.bold,
           fontSize: 16,
-          color: AppColors.allPrimaryColor,
+          color: Colors.white,
         ),
       ),
     );

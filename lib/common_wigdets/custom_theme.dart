@@ -45,11 +45,11 @@ class CustomThemeProvider extends ChangeNotifier {
       background: const Color(0xFFFAF9F6),
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
-      foregroundColor: Colors.black87,
+      backgroundColor: AppColors.allPrimaryColor,
+      foregroundColor: Colors.white,
       elevation: 0,
       centerTitle: true, // centered title for premium look
-      iconTheme: IconThemeData(color: Colors.black87),
+      iconTheme: IconThemeData(color: Colors.white),
     ),
     textTheme: const TextTheme(
       bodyLarge: TextStyle(color: Colors.black87),

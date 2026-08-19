@@ -23,7 +23,7 @@ class _MyCoursesScreenState extends State<MyCoursesScreen> {
       appBar: AppBar(
         title: Text(
           'My Courses',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp, color: Colors.white),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: Colors.white),
         ),
         backgroundColor: AppColors.allPrimaryColor,
         elevation: 0,

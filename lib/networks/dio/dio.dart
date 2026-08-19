@@ -32,7 +32,8 @@ final class DioSingleton {
       NetworkConstants.APP_KEY: NetworkConstants.APP_KEY_VALUE,
     };
     if (token != null && token.toString().isNotEmpty) {
-      headers[NetworkConstants.AUTHORIZATION] = "$token";
+      final String tokenStr = token.toString();
+      headers[NetworkConstants.AUTHORIZATION] = tokenStr.startsWith('Bearer') ? tokenStr : "Bearer $tokenStr";
     }
 
     BaseOptions options = BaseOptions(
@@ -56,7 +57,7 @@ final class DioSingleton {
         NetworkConstants.ACCEPT: NetworkConstants.ACCEPT_TYPE,
         NetworkConstants.ACCEPT_LANGUAGE: appData.read(kKeyLanguage) ?? "pt",
         NetworkConstants.APP_KEY: NetworkConstants.APP_KEY_VALUE,
-        NetworkConstants.AUTHORIZATION: "$auth",
+        NetworkConstants.AUTHORIZATION: auth.startsWith('Bearer') ? auth : "Bearer $auth",
       },
       connectTimeout: const Duration(milliseconds: 100000),
       receiveTimeout: const Duration(milliseconds: 100000),
@@ -76,7 +77,9 @@ final class DioSingleton {
         NetworkConstants.ACCEPT: NetworkConstants.ACCEPT_TYPE,
         NetworkConstants.ACCEPT_LANGUAGE: countryCode,
         NetworkConstants.APP_KEY: NetworkConstants.APP_KEY_VALUE,
-        NetworkConstants.AUTHORIZATION: "${appData.read(kKeyAccessToken)}",
+        NetworkConstants.AUTHORIZATION: appData.read(kKeyAccessToken)?.toString().startsWith('Bearer') == true 
+            ? "${appData.read(kKeyAccessToken)}" 
+            : "Bearer ${appData.read(kKeyAccessToken)}",
       },
       connectTimeout: const Duration(milliseconds: 100000),
       receiveTimeout: const Duration(milliseconds: 100000),

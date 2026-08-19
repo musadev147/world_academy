@@ -104,7 +104,9 @@ class ProfileScreen extends StatelessWidget {
                   _buildProfileOption(
                     icon: Icons.person_outline_rounded,
                     title: 'Personal Details',
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.PERSONAL_DETAILS);
+                    },
                   ),
                   _buildDivider(),
                   _buildProfileOption(
@@ -126,13 +128,17 @@ class ProfileScreen extends StatelessWidget {
                   _buildProfileOption(
                     icon: Icons.lock_outline_rounded,
                     title: 'Change Password',
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.CHANGE_PASSWORD);
+                    },
                   ),
                   _buildDivider(),
                   _buildProfileOption(
                     icon: Icons.help_outline_rounded,
                     title: 'Help & Support',
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.HELP_SUPPORT);
+                    },
                   ),
                 ],
               ),

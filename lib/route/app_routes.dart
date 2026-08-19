@@ -30,6 +30,11 @@ abstract class Routes {
   static const REFER = _Paths.REFER;
   static const YOUTUBE = _Paths.YOUTUBE;
 
+  // Profile Sub-screens
+  static const PERSONAL_DETAILS = _Paths.PERSONAL_DETAILS;
+  static const CHANGE_PASSWORD = _Paths.CHANGE_PASSWORD;
+  static const HELP_SUPPORT = _Paths.HELP_SUPPORT;
+
   // Admin
   static const ADMIN_DASHBOARD = _Paths.ADMIN_DASHBOARD;
   static const ADMIN_STUDENT_MANAGEMENT = _Paths.ADMIN_STUDENT_MANAGEMENT;
@@ -65,6 +70,9 @@ abstract class _Paths {
   static const RECERTIFICATION = '/recertification';
   static const REFER = '/refer';
   static const YOUTUBE = '/youtube';
+  static const PERSONAL_DETAILS = '/personal_details';
+  static const CHANGE_PASSWORD = '/change_password';
+  static const HELP_SUPPORT = '/help_support';
   static const ADMIN_DASHBOARD = '/admin_dashboard';
   static const ADMIN_STUDENT_MANAGEMENT = '/admin_student_management';
   static const ADMIN_ENROLLMENT = '/admin_enrollment';

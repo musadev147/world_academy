@@ -23,7 +23,7 @@ class YoutubeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('YouTube Channels'),
+        title: Text('YouTube Channels', style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600)),
         backgroundColor: AppColors.allPrimaryColor,
         foregroundColor: Colors.white,
       ),
@@ -40,19 +40,19 @@ class YoutubeScreen extends StatelessWidget {
               child: ListTile(
                 contentPadding: EdgeInsets.all(16.w),
                 leading: CircleAvatar(
-                  radius: 24.r,
+                  radius: 20.r,
                   backgroundColor: Colors.red.shade100,
-                  child: Icon(channel['icon'], color: Colors.red),
+                  child: Icon(channel['icon'], color: Colors.red, size: 20.r),
                 ),
                 title: Text(
                   channel['title'],
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.sp),
                 ),
                 subtitle: Padding(
                   padding: EdgeInsets.only(top: 4.h),
                   child: Text(
-                    channel['subscribers'],
-                    style: TextStyle(color: Colors.grey, fontSize: 14.sp),
+                     channel['subscribers'],
+                     style: TextStyle(color: Colors.grey, fontSize: 11.sp),
                   ),
                 ),
                 trailing: ElevatedButton(
@@ -63,8 +63,9 @@ class YoutubeScreen extends StatelessWidget {
                     backgroundColor: Colors.red,
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
                   ),
-                  child: Text('Visit'),
+                  child: Text('Visit', style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600)),
                 ),
               ),
             );

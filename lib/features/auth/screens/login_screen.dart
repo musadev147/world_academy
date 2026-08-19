@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -22,83 +23,110 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-        automaticallyImplyLeading: false,
-        backgroundColor: AppColors.allPrimaryColor,
-        foregroundColor: Colors.white,
-      ),
+      backgroundColor: Colors.white,
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 32.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Center(
-                child: Image.asset(
-                  'assets/images/logo.png', // Assuming a logo exists or placeholder
-                  height: 100.h,
-                  errorBuilder: (context, error, stackTrace) => Icon(
-                    Icons.school,
-                    size: 100.h,
-                    color: AppColors.allPrimaryColor,
-                  ),
-                ),
-              ),
-              SizedBox(height: 40.h),
-              Text(
-                'Welcome Back',
-                style: TextFontStyle.textStyle20PoppinsW400.copyWith(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24.sp,
-                  color: AppColors.c1C1C28,
-                ),
-              ),
-              SizedBox(height: 8.h),
-              Text(
-                'Sign in to your World Academy account.',
-                style: TextFontStyle.textStyle121C1C28Poppins400.copyWith(
-                  color: AppColors.c494953,
-                  fontSize: 14.sp,
-                ),
-              ),
-              SizedBox(height: 32.h),
-              CustomTextFormField(
-                controller: _authController.emailController,
-                labelText: 'Registration ID / Email',
-                hintText: 'Enter your ID or Email',
-                keyboardType: TextInputType.emailAddress,
-              ),
-              SizedBox(height: 16.h),
-              CustomTextFormField(
-                controller: _authController.passwordController,
-                labelText: 'Password',
-                hintText: 'Enter your password',
-                isPassword: true,
-              ),
-              SizedBox(height: 12.h),
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {
-                    Get.toNamed(Routes.FORGOT_PASSWORD);
-                  },
-                  child: Text(
-                    'Forgot Password?',
-                    style: TextFontStyle.textStyle121C1C28Poppins400.copyWith(
-                      color: AppColors.allPrimaryColor,
+        child: Center(
+          child: SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 40.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Container(
+                    padding: EdgeInsets.all(24.r),
+                    decoration: BoxDecoration(
+                      color: AppColors.allPrimaryColor.withOpacity(0.05),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      height: 72.h,
+                      errorBuilder: (context, error, stackTrace) => Icon(
+                        Icons.school_rounded,
+                        size: 72.h,
+                        color: AppColors.allPrimaryColor,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 32.h),
-              CommonButton(
-                text: 'Sign In',
-                onPressed: () {
-                  _authController.login();
-                },
-              ),
-            ],
+                SizedBox(height: 48.h),
+                Text(
+                  'Welcome Back 👋',
+                  style: GoogleFonts.outfit(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 28.sp,
+                    color: const Color(0xFF0F172A),
+                    letterSpacing: -0.5,
+                  ),
+                ),
+                SizedBox(height: 8.h),
+                RichText(
+                  text: TextSpan(
+                    style: GoogleFonts.outfit(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15.sp,
+                      color: const Color(0xFF64748B),
+                      height: 1.4,
+                    ),
+                    children: [
+                      const TextSpan(text: 'Sign in to your '),
+                      TextSpan(
+                        text: 'World Academy',
+                        style: GoogleFonts.outfit(
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.allPrimaryColor,
+                        ),
+                      ),
+                      const TextSpan(text: ' account.'),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 40.h),
+                CustomTextFormField(
+                  controller: _authController.emailController,
+                  labelText: 'Registration ID / Email',
+                  hintText: 'Enter your ID or Email',
+                  keyboardType: TextInputType.emailAddress,
+                ),
+                SizedBox(height: 20.h),
+                CustomTextFormField(
+                  controller: _authController.passwordController,
+                  labelText: 'Password',
+                  hintText: 'Enter your password',
+                  isPassword: true,
+                ),
+                SizedBox(height: 16.h),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: () {
+                      Get.toNamed(Routes.FORGOT_PASSWORD);
+                    },
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    child: Text(
+                      'Forgot Password?',
+                      style: GoogleFonts.outfit(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 13.sp,
+                        color: AppColors.allPrimaryColor,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 40.h),
+                CommonButton(
+                  text: 'Sign In',
+                  onPressed: () {
+                    _authController.login();
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),

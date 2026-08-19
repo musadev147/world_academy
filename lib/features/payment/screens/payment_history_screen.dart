@@ -36,7 +36,7 @@ class PaymentHistoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Payment History',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp, color: Colors.white),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp, color: Colors.white),
         ),
         backgroundColor: AppColors.allPrimaryColor,
         elevation: 0,

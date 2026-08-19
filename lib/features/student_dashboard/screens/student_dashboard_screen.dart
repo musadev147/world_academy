@@ -118,12 +118,7 @@ class _StudentDashboardScreenState extends State<StudentDashboardScreen> {
                             ),
                           ),
                           Expanded(
-                            child: Center(
-                              child: Text(
-                                'Dashboard',
-                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14.sp, color: Colors.white, letterSpacing: 0.5),
-                              ),
-                            ),
+                            child: SizedBox(),
                           ),
                           GestureDetector(
                             onTap: () => Get.toNamed(Routes.NOTIFICATIONS),
